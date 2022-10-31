@@ -1,0 +1,20 @@
+main {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: darkslategray;
+}
+
+button {
+    height: 10%;
+    width: 20%;
+
+    font-size: 160%;
+
+    border: none;
+    border-radius: 8px;
+}

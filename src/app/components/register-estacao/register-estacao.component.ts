@@ -1,4 +1,7 @@
+import { EstacaoModel } from './../../models/estacaoModel';
 import { Component, OnInit } from '@angular/core';
+import { EstacaoService } from 'src/app/services/estacao.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-estacao',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterEstacaoComponent implements OnInit {
 
-  constructor() { }
+  estacao: EstacaoModel = {
+    id: 0,
+    nome: "",
+    descricao: "",
+    localizacao: "",
+    responsavel: ""
+  }
+
+  constructor(private estacaoService: EstacaoService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  doRegister() {
+    this.estacaoService.addEstacao(this.estacao).subscribe(data => {
+      this.estacao = data
+    })
+
+    this.router.navigate([''])
+  }
 }

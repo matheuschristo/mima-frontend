@@ -1,1 +1,30 @@
-<p>register-estacao works!</p>
+<main>
+
+    <section id="container-principal">
+
+        <h1>Cadastro de estacao</h1>
+        
+        <form>
+
+            <div>
+                <label>Nome Estacao</label>
+                <input type="text" [(ngModel)]="estacao.nome">
+
+                <label>Descricao</label>
+                <input type="text" [(ngModel)]="estacao.descricao">
+            </div>
+            <div>
+                <label>Localizacao</label>
+                <input type="text" [(ngModel)]="estacao.localizacao">
+
+                <label for="">Nome Responsavel</label>
+                <input type="text" [(ngModel)]="estacao.responsavel">
+            </div>
+            
+        </form>
+
+        <button (click)="doRegister()">Cadastrar</button>
+
+    </section>
+
+</main>
