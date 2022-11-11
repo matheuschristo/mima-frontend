@@ -1,0 +1,15 @@
+<main>
+
+    <h1 class="title">Selecione uma Estacao</h1>
+
+    <div class="card-estacao" (click)="startMedicao(estacao.id)" *ngFor="let estacao of estacoes">
+        <h2>Estacao #{{estacao.id}}</h2>
+        <div>
+            <p>Nome: {{ estacao.nome }}</p>
+            <p>Descricao: {{ estacao.descricao }}</p>
+            <p>Localizacao: {{ estacao.localizacao }}</p>
+            <p>Nome Responsavel: {{ estacao.responsavel }}</p>
+        </div>
+    </div>
+
+</main>
