@@ -15,13 +15,13 @@ h1 {
 }
 
 button {
-    width: 20%;
-    height: 10%;
+    width: 10%;
+    height: 7%;
 
     border-radius: 15px;
     border: none;
 
-    font-size: 220%;
+    font-size: 160%;
 
     transition: 0.4s;
 }
@@ -34,8 +34,7 @@ input {
 button:hover {
     cursor: pointer;
 
-    width: 21%;
-    height: 11%;
+    font-size: 180%;
 
-    font-size: 240%;
+    color: #D65a31;
 }
