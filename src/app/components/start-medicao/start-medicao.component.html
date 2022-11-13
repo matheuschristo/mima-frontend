@@ -1,0 +1,22 @@
+<main>
+
+    <p>oal</p>
+    
+    <h1 class="title">Selecione uma Estação</h1>
+
+    <div class="consultas">
+        <input type="text" class="search" placeholder="Buscar Estacao" [(ngModel)]="this.searchNome"  (keyup)="getEstacaoByNome()">
+        <img src="../../../assets/search.png" alt="search" id="img-search">
+    </div>
+
+    <div class="card-estacao" (click)="startMedicao(estacao.id)" *ngFor="let estacao of estacoes">
+        <h2>Estacao #{{estacao.id}}</h2>
+        <div>
+            <p>Nome: {{ estacao.nome }}</p>
+            <p>Descrição: {{ estacao.descricao }}</p>
+            <p>Localização: {{ estacao.localizacao }}</p>
+            <p>Nome Responsável: {{ estacao.responsavel }}</p>
+        </div>
+    </div>
+
+</main>
