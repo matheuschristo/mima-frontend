@@ -2,28 +2,31 @@
 
     <section id="container-principal">
 
-        <h1>Cadastro de estacao</h1>
+        <h1>Cadastro de Estação</h1>
         
         <form>
 
             <div>
-                <label>Nome Estacao</label>
+                <label>Nome Estação</label>
                 <input type="text" [(ngModel)]="estacao.nome" name="nome">
 
-                <label>Descricao</label>
+                <label>Descrição</label>
                 <input type="text" [(ngModel)]="estacao.descricao" name="descricao">
             </div>
             <div>
-                <label>Localizacao</label>
+                <label>Localização</label>
                 <input type="text" [(ngModel)]="estacao.localizacao" name="localizacao">
 
-                <label for="responsavel">Nome Responsavel</label>
+                <label for="responsavel">Nome Responsável</label>
                 <input type="text" [(ngModel)]="estacao.responsavel" name="responsavel">
             </div>
             
         </form>
 
-        <button (click)="doRegister()">Cadastrar</button>
+        <div id="container-buttons">
+            <button [routerLink]="'/'" id="cancel-button">Cancelar</button>
+            <button (click)="doRegister()" id="register-button">Cadastrar</button>
+        </div>
 
     </section>
 

@@ -12,6 +12,8 @@ export class StartMedicaoComponent implements OnInit {
 
   estacoes: Array<EstacaoModel> = []
 
+  searchNome: string = ""
+
   constructor(
     private estacaoService: EstacaoService,
     private router: Router
@@ -25,6 +27,19 @@ export class StartMedicaoComponent implements OnInit {
     this.estacaoService.getAllEstacao().subscribe((data: any) => {
       this.estacoes = data
     })
+  }
+
+  getEstacaoByNome() {
+
+    if (this.searchNome == ""){
+      this.getAllEstacao()
+      return false
+    }
+      
+    this.estacaoService.getEstacaoByNome(this.searchNome).subscribe((data: any) => {
+      this.estacoes = data
+    })
+    return true
   }
 
   startMedicao(id: number) {

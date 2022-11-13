@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-medicao',
@@ -11,6 +11,7 @@ export class CreateMedicaoComponent implements OnInit {
   txt: File = new File(["foo"], "foo.txt", { type: "text/plain", })
 
   constructor(
+    private route: Router,
     private actRoute: ActivatedRoute
   ) { }
 
@@ -23,4 +24,7 @@ export class CreateMedicaoComponent implements OnInit {
     console.log(this.txt);
   }
 
+  goToMedicao() {
+    this.route.navigate(['/medicao/'+ this.actRoute.snapshot.params['idEstacao']])
+  }
 }

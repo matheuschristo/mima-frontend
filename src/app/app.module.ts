@@ -10,6 +10,8 @@ import { RegisterEstacaoComponent } from './components/register-estacao/register
 import { HomeComponent } from './components/home/home.component';
 import { StartMedicaoComponent } from './components/start-medicao/start-medicao.component';
 import { CreateMedicaoComponent } from './components/create-medicao/create-medicao.component';
+import { MedicaoComponent } from './components/medicao/medicao.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CreateMedicaoComponent } from './components/create-medicao/create-medic
     RegisterEstacaoComponent,
     HomeComponent,
     StartMedicaoComponent,
-    CreateMedicaoComponent
+    CreateMedicaoComponent,
+    MedicaoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

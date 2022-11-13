@@ -21,4 +21,8 @@ export class EstacaoService {
   getAllEstacao(): Observable<any> {
     return this.httpClient.get<any>(this.endPointEstacao + "getAll")
   }
+
+  getEstacaoByNome(nome: string): Observable<any> {
+    return this.httpClient.get<any>(this.endPointEstacao + "search-name/" + nome)
+  }
 }

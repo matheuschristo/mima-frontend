@@ -9,7 +9,7 @@ main {
 }
 
 .title {
-    margin: 2%;
+    margin: 4%;
 
     font-size: 230%;
     
@@ -25,9 +25,9 @@ main {
     align-items: center;
     flex-direction: column;
 
-    background-color: white;
+    background-color: #fff;
 
-    margin: 2%;
+    margin-top: 4%;
 
     border-radius: 15px;
 
@@ -40,7 +40,86 @@ main {
     width: 30%;
     height: 250px;
 
+    background-color: #eee;
+
     box-shadow: 0px 2px 10px 0px white;
 
     font-size: 150%;
+}
+
+.consultas {
+    display: flex;
+    width: 90%;
+    height: 4vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    width: 47%;
+    height: 6vh;
+
+    font-weight: 400;
+    font-size: 120%;
+    text-align: center;
+    color: #eee;
+    text-indent: 15px;
+
+    border: none;
+
+    background: #D65A31;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.search:hover {
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.search:focus {
+    height: 7vh;
+
+    border: 2px transparent solid;
+    background: #D65A31;
+
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #eee;
+
+    text-align: start;
+    font-size: 120%;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.search::placeholder {
+    color: #eee;
+}
+
+.search:focus::placeholder {
+    color: #eee;
+
+    opacity: 30%;
+}
+
+#img-search {
+    width: 35px;
+    margin-left: 1%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#back-button {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+
+    width: 7%;
+    height: 4%;
+
+    border: none;
+    border-radius: 5px;
 }
