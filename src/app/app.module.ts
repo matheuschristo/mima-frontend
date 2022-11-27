@@ -12,6 +12,8 @@ import { StartMedicaoComponent } from './components/start-medicao/start-medicao.
 import { CreateMedicaoComponent } from './components/create-medicao/create-medicao.component';
 import { MedicaoComponent } from './components/medicao/medicao.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     StartMedicaoComponent,
     CreateMedicaoComponent,
     MedicaoComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

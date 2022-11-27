@@ -1,0 +1,29 @@
+<main>
+
+    <form>
+
+        <h1 id="login-title">Login</h1>
+
+        <div id="container-model">
+            <div class="container-input">
+    
+                <input type="text" placeholder="Email" [(ngModel)]="user.email">
+    
+            </div>
+    
+            <div class="container-input">
+                
+                <input type="text" placeholder="Senha" [(ngModel)]="user.senha">
+    
+            </div>
+        </div>
+
+        <div id="container-submit">
+            <button (click)="doLogin()">Entrar</button>
+    
+            <a [routerLink]="'/register-user'">Cadastrar-se</a>
+        </div>
+
+    </form>
+
+</main>

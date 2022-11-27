@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 75%;
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px solid #D65A31;
+
+    background-color: #393E46;
+}
+
+#container-model {
+    width: 80%;
+    height: 30%;
+}
+
+.container-input {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#login-title {
+    color: white;
+    
+    font-size: 55px;
+    font-weight: 200;
+}
+
+input {
+    height: 50%;
+    width: 100%;
+    
+    outline: none;
+    
+    border: 2px transparent;
+    border-bottom: 2px solid #D65A31;
+    
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    
+    text-indent: 4px;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    border-right: 2px solid #D65A31;
+    
+    border-top: 2px solid #D65A31;
+}
+
+input::placeholder {
+    color: white;
+    
+    font-size: 15px;
+}
+
+input:focus::placeholder {
+    opacity: 20%;
+}
+
+#container-submit {
+    height: 13%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    height: 70%;
+    width: 45%;
+
+    background-color: #fff;
+    color: #000;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    border-radius: 5px;
+    border: none;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    cursor: pointer;
+
+    background-color: #D65A31;
+    color: #fff;
+}
+
+a {
+    margin-top: 5px;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+a:hover {
+    color: #D65A31;
+}

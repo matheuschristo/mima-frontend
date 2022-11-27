@@ -1,4 +1,5 @@
-import { EstacaoModel } from './../../models/estacaoModel';
+import { UserService } from './../../services/user.service';
+import { EstacaoModel, EstacaoRegisterModel } from './../../models/estacaoModel';
 import { Component, OnInit } from '@angular/core';
 import { EstacaoService } from 'src/app/services/estacao.service';
 import { Router } from '@angular/router';
@@ -10,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class RegisterEstacaoComponent implements OnInit {
 
-  estacao: EstacaoModel = {
-    id: 0,
+  estacao: EstacaoRegisterModel = {
+    idUser: JSON.parse(this.userService.getUserAutenticado()).id,
     nome: "",
     descricao: "",
     localizacao: "",
@@ -19,7 +20,8 @@ export class RegisterEstacaoComponent implements OnInit {
   }
 
   constructor(private estacaoService: EstacaoService,
-              private router: Router) { }
+              private router: Router,
+              private userService: UserService) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +31,6 @@ export class RegisterEstacaoComponent implements OnInit {
       this.estacao = data
     })
 
-    this.router.navigate([''])
+    this.router.navigate(['/home'])
   }
 }

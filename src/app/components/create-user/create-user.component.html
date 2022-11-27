@@ -1,0 +1,19 @@
+<main>
+
+    <form>
+
+        
+        <div class="container-model">            
+            <h1>Cadastro</h1>
+            <input type="text" placeholder="Nome" required [(ngModel)]="user.nome" name="nome">
+            <input type="text" placeholder="Sobrenome" required [(ngModel)]="user.sobrenome" name="sobrenome">
+            <input type="text" placeholder="Telefone" required [(ngModel)]="user.phone" name="phone">
+            <input type="text" placeholder="Email" required [(ngModel)]="user.email" name="email">
+            <input type="password" placeholder="Senha" required minlength="8" [(ngModel)]="user.senha" name="senha">
+        </div>
+
+        <button (click)="addUser()">Cadastrar</button>
+
+    </form>
+
+</main>

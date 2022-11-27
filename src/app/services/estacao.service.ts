@@ -1,4 +1,4 @@
-import { EstacaoModel} from './../models/estacaoModel';
+import { EstacaoModel, EstacaoRegisterModel } from './../models/estacaoModel';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -14,8 +14,8 @@ export class EstacaoService {
 
   // POST
 
-  addEstacao(postData: EstacaoModel): Observable<EstacaoModel> {
-    return this.httpClient.post<EstacaoModel>(this.endPointEstacao, postData)
+  addEstacao(postData: EstacaoRegisterModel): Observable<EstacaoRegisterModel> {
+    return this.httpClient.post<EstacaoRegisterModel>(this.endPointEstacao, postData)
   }
 
   getAllEstacao(): Observable<any> {
